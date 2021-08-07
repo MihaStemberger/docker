@@ -1,0 +1,6 @@
+version: "3.7"
+services:
+  wildfly:
+    image: "jboss/wildfly:20.0.1.Final"
+    volumes:
+      - ./_deployables:/opt/jboss/wildfly/standalone/deployments
