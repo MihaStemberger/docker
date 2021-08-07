@@ -4,3 +4,7 @@ services:
     image: "jboss/wildfly:20.0.1.Final"
     volumes:
       - ./_deployables:/opt/jboss/wildfly/standalone/deployments
+    ports:
+    - "8787:8787"
+    environment:
+      JAVA_TOOL_OPTIONS: -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:8787
